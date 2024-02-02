@@ -52,7 +52,7 @@ export function Navbar() {
         <div
           className={
             nav
-              ? "min-[900px]:hidden fixed left-0 top-0 w-full h-screen bg-gray-200/85 z-10"
+              ? "min-[900px]:hidden fixed left-0 top-0 w-full h-screen bg-orange-300/35 z-10"
               : ""
           }
         >

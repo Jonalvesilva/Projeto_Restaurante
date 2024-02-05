@@ -9,7 +9,7 @@ export function Dinner() {
       <div>
         <h2 className="text-3xl pb-8">Nossos Pratos</h2>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 mb-12">
         {data.data[0].dishes.map((data) => {
           return (
             <div

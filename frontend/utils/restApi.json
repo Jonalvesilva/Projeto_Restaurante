@@ -136,14 +136,14 @@
           "image": "./review3.png",
           "description": "Le Chateau Brasil encanta com sua culinária refinada e atmosfera charmosa. Uma experiência deliciosa!",
           "rating": 5,
-          "userName": "Guy Hawkins"
+          "userName": "Julia Roberts"
         },
         {
           "id": 5,
           "image": "./review3.png",
           "description": "No Le Chateau Brasil, a tradição brasileira se encontra com o requinte. Nota 4/5 pela excelência gastronômica e ambiente acolhedor.",
           "rating": 5,
-          "userName": "Guy Hawkins"
+          "userName": "Steve Jobs"
         }
       ],
       "who_we_are": [

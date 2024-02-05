@@ -2,7 +2,10 @@ import Slider from "../components/Slider";
 
 export function Chefs() {
   return (
-    <section className="flex mx-auto items-center justify-center" id="unidades">
+    <section
+      className="min-w-[500px] flex mx-auto items-center justify-center"
+      id="unidades"
+    >
       <div
         style={{ backgroundImage: "url('/chefs.png')" }}
         className="h-[600px] w-full flex bg-cover bg-center"

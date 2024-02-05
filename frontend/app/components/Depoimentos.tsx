@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export function Depoimentos() {
   return (
-    <section className="flex h-[500px] bg-orange-900">
+    <section className="min-w-[500px] flex h-[500px] bg-orange-900">
       <div className="flex max-w-screen-lg items-center justify-center flex-col w-full lg:mx-auto gap-y-6">
         <div>
           <h2 className="text-white text-3xl">Depoimentos</h2>

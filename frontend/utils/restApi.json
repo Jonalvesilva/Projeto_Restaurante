@@ -5,94 +5,94 @@
         {
           "id": 1,
           "image": "./quality/quality_food.svg",
-          "title": "QUALITY FOOD",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat."
+          "title": "ÓTIMA REFEIÇÃO",
+          "description": "Desfrute de uma experiência gastronômica excepcional, onde cada sabor é uma sinfonia de prazer para o paladar."
         },
         {
           "id": 2,
           "image": "./quality/super_taste.svg",
-          "title": "SUPER TASTE",
-          "description": "Lorem ipsum dolor sit amet consectetur, adipisicing sit amet elit. Sit voluptates quaerat pariatur."
+          "title": "ALTAMENTE DELICIOSA",
+          "description": "Saboreie cada mordida desta iguaria irresistível, uma explosão de sabores que leva a uma experiência culinária verdadeiramente e altamente deliciosa."
         },
         {
           "id": 3,
           "image": "./quality/fast_delivery.svg",
-          "title": "FAST DELIVERY",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat."
+          "title": "ENTREGA RÁPIDA",
+          "description": "Desfrute da rapidez em cada entrega, onde a eficiência se une ao sabor, trazendo a frescura dos pratos até sua porta em um piscar de olhos."
         }
       ],
       "dishes": [
         {
           "id": 1,
-          "image": "./dinner1.jpeg",
-          "title": "ROASTED LAMB RUMP",
+          "image": "./food/dinner1.jpeg",
+          "title": "Costela com Batata",
           "category": "Dinner"
         },
         {
           "id": 2,
-          "image": "./dinner2.png",
-          "title": "CITRUS CURED SALMON",
+          "image": "./food/dinner2.png",
+          "title": "Torrada Le Chateau",
           "category": "Dinner"
         },
         {
           "id": 3,
-          "image": "./breakfast1.png",
-          "title": "PAN SEARED SEA BASS",
+          "image": "./food/breakfast1.png",
+          "title": "Salada Cezar",
           "category": "Breakfast"
         },
         {
           "id": 4,
-          "image": "./dinner3.png",
-          "title": "STUFFED STRAWBERRY",
+          "image": "./food/dinner3.png",
+          "title": "Bolo Frutas Vermelhas",
           "category": "Dinner"
         },
         {
           "id": 5,
-          "image": "./lunch1.png",
-          "title": "BEEF BURGER MEAL",
+          "image": "./food/lunch1.png",
+          "title": "Burguer Le Chateau",
           "category": "Lunch"
         },
         {
           "id": 6,
-          "image": "./dinner4.png",
-          "title": "MUSSELS SOUP",
+          "image": "./food/dinner4.png",
+          "title": "Sopa Alho Poró",
           "category": "Dinner"
         },
         {
           "id": 7,
-          "image": "./dinner5.png",
-          "title": "ITALIAN SPAGHETTI",
+          "image": "./food/dinner5.png",
+          "title": "Espaguete Italiano",
           "category": "Dinner"
         },
         {
           "id": 8,
-          "image": "./dinner6.png",
-          "title": "GRILLED FISH",
+          "image": "./food/dinner6.png",
+          "title": "Peixe com ervas",
           "category": "Dinner"
         }
       ],
       "team": [
         {
           "id": 1,
-          "image": "./team_member_1.png",
+          "image": "./team/team_member_1.png",
           "name": "JOHNATHAN TYLER",
           "designation": "Founder & Head Chef"
         },
         {
           "id": 2,
-          "image": "./team_member_2.png",
+          "image": "./team/team_member_2.png",
           "name": "WADE WARREN",
           "designation": "Sous Chef"
         },
         {
           "id": 3,
-          "image": "./team_member_3.png",
+          "image": "./team/team_member_3.png",
           "name": "JHON DOE",
           "designation": "Fast Food Chef"
         },
         {
           "id": 4,
-          "image": "./team_member_4.png",
+          "image": "./team/team_member_4.png",
           "name": "ALEX COAL",
           "designation": "Senior Chef"
         }
@@ -144,14 +144,19 @@
       ],
       "navbarLinks": [
         {
-          "id": 2,
+          "id": 1,
           "title": "Sobre",
           "link": "about"
         },
         {
-          "id": 3,
-          "title": "Serviços",
+          "id": 2,
+          "title": "Qualidades",
           "link": "qualities"
+        },
+        {
+          "id": 3,
+          "title": "Pratos",
+          "link": "dinner"
         },
         {
           "id": 4,

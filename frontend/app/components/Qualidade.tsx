@@ -5,15 +5,16 @@ const Qualidade = () => {
   return (
     <>
       <section
-        className="flex h-fit flex-col items-center justify-center py-[75px] px-[20px] bg-orange-900"
+        style={{ backgroundImage: "url('/quality.jpg')" }}
+        className="min-w-[500px] flex h-fit flex-col items-center justify-center py-[75px] px-[20px] bg-cover bg-no-repeat bg-center"
         id="qualities"
       >
-        <h2 className="text-2xl text-white pb-12">Nossas Qualidades</h2>
-        <div className="min-w-[1500px] max-w-[1500px] flex flex-wrap">
+        <h2 className="text-3xl text-white pb-12">Nossas Qualidades</h2>
+        <div className="w-[50%] min-w-[400px] max-w-[1500px] flex flex-col gap-y-6 xl:flex-row xl:gap-x-6 xl:w-full">
           {data.data[0].ourQualities.map((element) => {
             return (
               <div
-                className="flex-1 flex flex-col items-center justify-center text-align px-[100px]"
+                className="flex flex-col items-center justify-center p-4 text-align  rounded-xl"
                 key={element.id}
               >
                 <img
@@ -21,10 +22,10 @@ const Qualidade = () => {
                   src={element.image}
                   alt={element.title}
                 />
-                <p className="text-[1.8rem] font-[700] text-white mb-[12px]">
+                <p className="text-[1.8rem] font-[700] text-white mb-[12px] tex-center">
                   {element.title}
                 </p>
-                <p className="texxt-[18px] text-white font-[300]">
+                <p className="text-[18px] text-white text-center font-[300]">
                   {element.description}
                 </p>
               </div>

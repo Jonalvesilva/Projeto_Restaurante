@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex max-w-screen-lg mx-auto items-center justify-center w-[90%] py-14"
+      className="flex min-w-[500px] max-w-screen-lg mx-auto items-center justify-center w-[90%] py-14 px-4"
     >
       <div>
         <div>

@@ -13,7 +13,10 @@ export function Navbar() {
 
   return (
     <>
-      <div className=" flex items-center justify-between w-full h-[100px] bg-[#3e2723]/90 border-b-2 border-b-orange-500 min-w-[500px]">
+      <div
+        className=" flex items-center justify-between w-full h-[100px] bg-[#3e2723]/90 border-b-2 border-b-orange-500 min-w-[500px]"
+        id="navbar"
+      >
         <div className="flex h-[150px] w-full mx-10 justify-between">
           <div className="text-3xl text-white flex items-center">
             Le Chateau Brasil

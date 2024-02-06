@@ -1,4 +1,5 @@
 import About from "./components/About";
+import { BottomMenu } from "./components/BottomMenu";
 import { Chefs } from "./components/Chefs";
 import { Depoimentos } from "./components/Depoimentos";
 import { Dinner } from "./components/Dinner";
@@ -18,6 +19,7 @@ export default function Home() {
       <Depoimentos />
       <Reservas />
       <Footer />
+      <BottomMenu />
     </>
   );
 }

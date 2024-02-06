@@ -4,7 +4,7 @@ export function Chefs() {
   return (
     <section
       className="min-w-[500px] flex mx-auto items-center justify-center"
-      id="unidades"
+      id="team"
     >
       <div
         style={{ backgroundImage: "url('/chefs.png')" }}

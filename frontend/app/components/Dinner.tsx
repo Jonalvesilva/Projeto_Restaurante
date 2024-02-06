@@ -4,7 +4,7 @@ export function Dinner() {
   return (
     <section
       className="min-w-[500px] flex max-w-screen-lg mx-auto flex-col py-12 items-center"
-      id="servicos"
+      id="dinner"
     >
       <div>
         <h2 className="text-3xl pb-8">Nossos Pratos</h2>

@@ -3,7 +3,6 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoMdMenu } from "react-icons/io";
-import { LinkButton } from "./LinkButton";
 import data from "../../utils/restApi.json";
 
 export function Navbar() {

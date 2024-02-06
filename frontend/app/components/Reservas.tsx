@@ -3,7 +3,9 @@
 import React, { FormEvent, useState } from "react";
 import { api } from "../api/api";
 import toast from "react-hot-toast";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { TextNumber } from "./TextNumber";
+import { ImSpinner2 } from "react-icons/im";
+import { useLoadingStore } from "@/useLoadingStore";
 
 type Reserva = {
   nome: string;
@@ -17,18 +19,18 @@ type Reserva = {
 export function Reservas() {
   const initial = {} as Reserva;
   const [form, setForm] = useState<Reserva>(initial);
-  const [loading, setLoading] = useState(false);
+  const loading = useLoadingStore((state: any) => state.loading);
+  const setLoading = useLoadingStore((state: any) => state.setIsLoading);
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     const response = await api.post("/api/v1/reservas/send", form);
     if (response.data.success) {
       toast.success(response.data.message);
-      setLoading(false);
+      setForm(initial);
     } else {
-      toast.error(response.data.message);
       setLoading(false);
+      toast.error(response.data.message);
     }
   };
 
@@ -50,52 +52,71 @@ export function Reservas() {
             </h2>
           </div>
           <div className="w-full h-full">
-            <form className="w-[80%] h-full mx-auto xl:w-full xl:mx-0">
+            <form
+              className="w-[80%] h-full mx-auto xl:w-full xl:mx-0"
+              onSubmit={onSubmit}
+            >
               <div className="flex flex-col xl:flex-row xl:gap-x-6">
                 <input
                   type="text"
-                  value={form.nome}
+                  value={form.nome || ""}
                   placeholder="Nome"
                   className="w-full border border-black/30 text-lg p-2 my-2 outline-none"
+                  onChange={(e) => setForm({ ...form, nome: e.target.value })}
                 />
                 <input
                   type="text"
-                  value={form.sobrenome}
+                  value={form.sobrenome || ""}
                   placeholder="Sobrenome"
                   className="w-full border border-black/30  text-lg p-2 my-2 outline-none"
+                  onChange={(e) =>
+                    setForm({ ...form, sobrenome: e.target.value })
+                  }
                 />
               </div>
               <input
                 type="email"
-                value={form.email}
+                value={form.email || ""}
                 placeholder="Email"
                 className="w-full border border-black/30  text-lg p-2 my-2 outline-none"
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
               ></input>
-              <input
-                type="text"
-                value={form.phone}
+
+              <TextNumber
                 placeholder="Telefone"
                 className="w-full border border-black/30  text-lg p-2 my-2 outline-none"
-              ></input>
+                value={form.phone || ""}
+                onChange={(e) => setForm({ ...form, phone: e })}
+              />
+
               <div className="flex flex-col xl:flex-row xl:gap-x-6">
                 <input
                   type="date"
-                  value={form.date}
+                  value={form.date || ""}
                   placeholder="Data"
                   className="w-full border border-black/30  text-lg p-2 my-2 outline-none"
+                  onChange={(e) => setForm({ ...form, date: e.target.value })}
                 ></input>
                 <input
                   type="time"
-                  value={form.time}
+                  value={form.time || ""}
                   placeholder="Hora"
                   className="w-full border border-black/30  text-lg p-2 my-2 outline-none"
+                  onChange={(e) => setForm({ ...form, time: e.target.value })}
                 ></input>
               </div>
               <button
                 type="submit"
-                className="p-3 bg-green-600 text-xl w-full mt-4 mb-8 xl:mb-0 text-white rounded-xl"
+                className={`p-3  text-xl flex justify-center w-full mt-4 mb-8 xl:mb-0 text-white rounded-xl ${
+                  loading ? "cursor-not-allowed bg-gray-500" : "bg-green-600"
+                }`}
+                disabled={loading}
               >
-                Reservar
+                {loading ? (
+                  <ImSpinner2 size={20} className="animate-spin" />
+                ) : (
+                  "Reservar"
+                )}
               </button>
             </form>
           </div>

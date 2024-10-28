@@ -9,6 +9,11 @@ export function Navbar() {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
+    if (!nav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
 
   return (
@@ -61,8 +66,8 @@ export function Navbar() {
           <div
             className={
               nav
-                ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#020303] p-10 ease-in duration-300"
-                : "fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#020303] ease-in duration-300"
+                ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#020303] p-10 ease-in duration-300 overflow-y-auto"
+                : "fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#020303] ease-in duration-300 overflow-y-auto"
             }
           >
             <div>
